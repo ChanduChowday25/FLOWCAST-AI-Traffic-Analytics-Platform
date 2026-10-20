@@ -1,0 +1,26 @@
+data:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  traffic_file: traffic_sensor_log.csv
+  weather_file: weather_observations.csv
+  calendar_file: calendar_events.csv
+
+paths:
+  models_dir: models
+  reports_dir: reports
+  figures_dir: reports/figures
+
+targets:
+  volume: traffic_volume
+  speed: avg_speed
+  congestion: congestion_level
+  travel_time: travel_time
+  accident_count: accident_count
+
+features:
+  rush_hour_intervals:
+    - [7, 10]
+    - [16, 19]
+
+random_seed: 42

@@ -1,0 +1,45 @@
+{
+  "comparison": "random_forest_lstm_gru",
+  "validation_only": true,
+  "alignment_keys": [
+    "road_id",
+    "timestamp",
+    "actual_target_30m"
+  ],
+  "exclusions": {
+    "random_forest_validation_rows": 25141,
+    "lstm_validation_rows": 18704,
+    "gru_validation_rows": 18704,
+    "shared_road_timestamp_rows": 18704,
+    "target_mismatch_rows": 0,
+    "common_rows": 18704,
+    "random_forest_only_rows": 6437,
+    "lstm_only_rows": 0,
+    "gru_only_rows": 0
+  },
+  "metrics": {
+    "random_forest": {
+      "rmse": 62.58257502384832,
+      "mae": 42.496093347477526,
+      "mape": 10.286796936694746,
+      "r2": 0.9492186491494592
+    },
+    "lstm": {
+      "rmse": 56.234498024168815,
+      "mae": 38.76435798697231,
+      "mape": 9.70176916464889,
+      "r2": 0.9589981891594926
+    },
+    "gru": {
+      "rmse": 55.921595772938716,
+      "mae": 38.709621848358466,
+      "mape": 9.820961897845686,
+      "r2": 0.9594532075554121
+    }
+  },
+  "source_reports": {
+    "random_forest": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\reports\\random_forest_regression_validation.json",
+    "lstm": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\reports\\lstm_volume_validation.json",
+    "gru": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\reports\\gru_volume_validation.json"
+  }
+}

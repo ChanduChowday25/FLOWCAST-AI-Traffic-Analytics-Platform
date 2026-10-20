@@ -1,0 +1,102 @@
+{
+  "model": "lstm",
+  "target_column": "traffic_volume_target_30m",
+  "feature_columns": [
+    "road_id",
+    "traffic_volume",
+    "avg_speed",
+    "occupancy",
+    "weather_temperature",
+    "weather_rainfall",
+    "weather_visibility",
+    "hour_of_day",
+    "day_of_week",
+    "is_weekend",
+    "month",
+    "is_rush_hour"
+  ],
+  "transformed_feature_names": [
+    "traffic_volume",
+    "avg_speed",
+    "occupancy",
+    "weather_temperature",
+    "weather_rainfall",
+    "weather_visibility",
+    "hour_of_day",
+    "day_of_week",
+    "is_weekend",
+    "month",
+    "is_rush_hour",
+    "road_id_NL-001",
+    "road_id_NL-002",
+    "road_id_NL-003",
+    "road_id_NL-004",
+    "road_id_NL-005",
+    "road_id_NL-006",
+    "road_id_NL-007",
+    "road_id_NL-008",
+    "road_id_NL-009",
+    "road_id_NL-010",
+    "road_id_NL-011",
+    "road_id_NL-012",
+    "road_id_NL-013",
+    "road_id_NL-014",
+    "road_id_NL-015",
+    "road_id_NL-016",
+    "road_id_NL-017",
+    "road_id_NL-018",
+    "road_id_NL-019",
+    "road_id_NL-020",
+    "road_id_NL-021",
+    "road_id_NL-022",
+    "road_id_NL-023",
+    "road_id_NL-024",
+    "road_id_NL-025"
+  ],
+  "sequence_length": 12,
+  "device": "cpu",
+  "configuration": {
+    "hidden_size": 32,
+    "num_layers": 1,
+    "dropout": 0.2,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "learning_rate": 0.001,
+    "early_stopping_patience": 7,
+    "lr_patience": 3,
+    "lr_factor": 0.5,
+    "seed": 42
+  },
+  "best_epoch": 49,
+  "best_validation_loss": 3159.067057638852,
+  "sequence_counts": {
+    "train": 89205,
+    "validation": 18704
+  },
+  "split_boundaries": {
+    "train": {
+      "endpoint_timestamp_start": "2025-01-01 05:30:00",
+      "endpoint_timestamp_end": "2025-04-16 16:00:00"
+    },
+    "validation": {
+      "endpoint_timestamp_start": "2025-04-16 22:00:00",
+      "endpoint_timestamp_end": "2025-05-09 07:30:00"
+    }
+  },
+  "validation": {
+    "row_count": 18704,
+    "valid_prediction_count": 18704,
+    "zero_target_count": 0,
+    "mape_eligible_count": 18704,
+    "rmse": 56.234498024168815,
+    "mae": 38.76435798697231,
+    "mape": 9.70176916464889,
+    "r2": 0.9589981891594926
+  },
+  "mape_policy": "Zero-valued targets are excluded because percentage error is undefined.",
+  "model_artifact": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\models\\lstm_volume_model.pt",
+  "checkpoint_artifact": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\models\\lstm_volume_best_checkpoint.pt",
+  "preprocessor_artifact": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\models\\lstm_volume_preprocessor.joblib",
+  "history_artifact": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\models\\lstm_volume_history.json",
+  "curve_artifact": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\reports\\figures\\lstm_volume_training_curve.png"
+}

@@ -1,0 +1,1 @@
+"""FLOWCAST dashboard package."""

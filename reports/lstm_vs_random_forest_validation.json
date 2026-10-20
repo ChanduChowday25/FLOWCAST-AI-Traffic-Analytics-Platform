@@ -1,0 +1,36 @@
+{
+  "comparison": "lstm_vs_random_forest",
+  "validation_only": true,
+  "alignment_keys": [
+    "road_id",
+    "timestamp",
+    "actual_target_30m"
+  ],
+  "exclusions": {
+    "lstm_validation_rows": 18704,
+    "random_forest_valid_validation_rows": 25141,
+    "shared_road_timestamp_rows": 18704,
+    "target_mismatch_rows": 0,
+    "common_rows": 18704,
+    "lstm_only_rows": 0,
+    "random_forest_only_rows": 6437
+  },
+  "metrics": {
+    "lstm": {
+      "rmse": 56.234498024168815,
+      "mae": 38.76435798697231,
+      "mape": 9.70176916464889,
+      "r2": 0.9589981891594926
+    },
+    "random_forest": {
+      "rmse": 62.58257502384832,
+      "mae": 42.496093347477526,
+      "mape": 10.286796936694746,
+      "r2": 0.9492186491494592
+    }
+  },
+  "source_reports": {
+    "lstm": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\reports\\lstm_volume_validation.json",
+    "random_forest": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\reports\\random_forest_regression_validation.json"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "input_dataset": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\data\\processed\\flowcast_target_30m.csv",
+  "target_column": "traffic_volume_target_30m",
+  "feature_columns": [
+    "road_id",
+    "road_capacity",
+    "traffic_volume_lag_1",
+    "traffic_volume_lag_2",
+    "traffic_volume_rolling_mean_3",
+    "traffic_volume_rolling_mean_6",
+    "hour_of_day",
+    "day_of_week",
+    "is_weekend",
+    "month",
+    "is_rush_hour"
+  ],
+  "model": "sklearn.linear_model.LinearRegression",
+  "split": {
+    "train_proportion": 0.7,
+    "validation_proportion": 0.15,
+    "test_proportion": 0.15,
+    "train_row_count": 123716,
+    "validation_row_count": 26482
+  },
+  "training": {
+    "row_count": 123716,
+    "valid_target_row_count": 117553,
+    "excluded_target_row_count": 6163,
+    "timestamp_start": "2025-01-01 00:00:00",
+    "timestamp_end": "2025-04-16 16:00:00"
+  },
+  "validation": {
+    "row_count": 26482,
+    "valid_prediction_count": 25141,
+    "excluded_target_row_count": 1341,
+    "zero_target_count": 0,
+    "mape_eligible_count": 25141,
+    "rmse": 122.30417323026559,
+    "mae": 93.14095909528596,
+    "mape": 25.7013809545552,
+    "r2": 0.8071404671303353,
+    "timestamp_start": "2025-04-16 16:30:00",
+    "timestamp_end": "2025-05-09 07:30:00"
+  },
+  "mape_policy": "Zero-valued targets are excluded because percentage error is undefined.",
+  "preprocessor_artifact": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\models\\linear_regression_preprocessor.joblib",
+  "model_artifact": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\models\\linear_regression_model.joblib"
+}

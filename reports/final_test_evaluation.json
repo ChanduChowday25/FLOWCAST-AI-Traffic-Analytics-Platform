@@ -1,0 +1,46 @@
+{
+  "evaluation": "final_gru_test",
+  "selected_candidate": "gru",
+  "selection_basis": {
+    "validation_comparison": "reports/all_models_validation_comparison.json",
+    "reason": "GRU led on RMSE, MAE, and R2 on the common validation set; LSTM and Random Forest remain comparison baselines."
+  },
+  "validation_only_for_selection": true,
+  "test_partition_only_for_evaluation": true,
+  "sequence_history_policy": "Test sequences were built from the test partition only. The first 11 test rows per road were excluded when they lacked 12 test rows of contiguous history.",
+  "preprocessing_policy": "Sequence preprocessing was fitted on training rows only and applied to the test sequences without refitting.",
+  "model_artifact": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\models\\gru_volume_model.pt",
+  "model_configuration": {
+    "hidden_size": 32,
+    "num_layers": 1,
+    "dropout": 0.2,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "learning_rate": 0.001,
+    "early_stopping_patience": 7,
+    "lr_patience": 3,
+    "lr_factor": 0.5,
+    "seed": 42
+  },
+  "sequence_length": 12,
+  "exclusions": {
+    "test_row_count": 26503,
+    "valid_test_prediction_count": 18640,
+    "excluded_test_examples": 7863,
+    "insufficient_history": 275,
+    "non_contiguous_timestamp": 6548,
+    "missing_target": 1040,
+    "non_finite_target": 0,
+    "negative_target": 0
+  },
+  "metrics": {
+    "rmse": 61.429334324134025,
+    "mae": 40.84581122684888,
+    "mape": 10.158372793795259,
+    "r2": 0.9549457463941743
+  },
+  "test_boundaries": {
+    "timestamp_start": "2025-05-09 08:00:00",
+    "timestamp_end": "2025-05-31 23:30:00"
+  }
+}

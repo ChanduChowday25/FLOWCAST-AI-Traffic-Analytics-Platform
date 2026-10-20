@@ -1,0 +1,44 @@
+{
+  "input_dataset": "C:\\Users\\lavan\\OneDrive\\Desktop\\FLOWCAST\\data\\processed\\flowcast_target_30m.csv",
+  "target_column": "traffic_volume_target_30m",
+  "persistence_input_column": "traffic_volume_lag_1",
+  "split": {
+    "train_proportion": 0.7,
+    "validation_proportion": 0.15,
+    "test_proportion": 0.15,
+    "train_row_count": 123716,
+    "validation_row_count": 26482,
+    "test_row_count": 26503
+  },
+  "validation": {
+    "row_count": 26482,
+    "valid_prediction_count": 23857,
+    "excluded_row_count": 2625,
+    "missing_baseline_count": 1348,
+    "invalid_target_count": 1341,
+    "zero_target_count": 0,
+    "mape_eligible_count": 23857,
+    "rmse": 158.47764768369757,
+    "mae": 111.87521482164564,
+    "mape": 25.548615559123338,
+    "r2": 0.6764766312490913,
+    "timestamp_start": "2025-04-16 16:30:00",
+    "timestamp_end": "2025-05-09 07:30:00"
+  },
+  "test": {
+    "row_count": 26503,
+    "valid_prediction_count": 23822,
+    "excluded_row_count": 2681,
+    "missing_baseline_count": 1363,
+    "invalid_target_count": 1390,
+    "zero_target_count": 0,
+    "mape_eligible_count": 23822,
+    "rmse": 162.10834307276,
+    "mae": 114.27751658131139,
+    "mape": 25.851146290573425,
+    "r2": 0.6829807268053829,
+    "timestamp_start": "2025-05-09 08:00:00",
+    "timestamp_end": "2025-05-31 23:30:00"
+  },
+  "mape_policy": "Zero-valued targets are excluded because percentage error is undefined."
+}

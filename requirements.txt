@@ -1,0 +1,10 @@
+pandas>=2.0,<3.0
+numpy>=1.24,<3.0
+PyYAML>=6.0,<7.0
+matplotlib>=3.7,<4.0
+scikit-learn>=1.2,<2.0
+joblib>=1.2,<2.0
+torch==2.14.1+cpu
+streamlit>=1.39,<2.0
+plotly>=5.24,<6.0
+--extra-index-url https://download.pytorch.org/whl/cpu
