@@ -4,11 +4,19 @@ from __future__ import annotations
 
 import html
 import math
+import sys
 from datetime import date
+from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+
+# Streamlit runs this file as a script, so ensure the project package root is
+# importable before loading dashboard modules that depend on src.
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 if __package__:
     from .data_access import load_processed_data
