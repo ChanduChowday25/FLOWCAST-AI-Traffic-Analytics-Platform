@@ -365,6 +365,30 @@ FLOWCAST-AI-Traffic-Analytics-Platform/
 └── project_reference/          # PRD and data dictionary (.docx)
 ```
 
+<h2 align="center">📸 Project Photos</h2>
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/ChanduChowday25/FLOWCAST-AI-Traffic-Analytics-Platform/blob/main/Screenshot%202026-11-12%20111235.png" width="100%" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/ChanduChowday25/FLOWCAST-AI-Traffic-Analytics-Platform/blob/main/Screenshot%202026-11-12%20111407.png" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/ChanduChowday25/FLOWCAST-AI-Traffic-Analytics-Platform/blob/main/Screenshot%202026-11-12%20111433.png" width="100%" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/ChanduChowday25/FLOWCAST-AI-Traffic-Analytics-Platform/blob/main/Screenshot%202026-11-12%20111456.png" width="100%" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/ChanduChowday25/FLOWCAST-AI-Traffic-Analytics-Platform/blob/main/Screenshot%202026-11-12%20111519.png" />
+    </td>
+  </tr>
+</table>
+
 | Location | In Git? | Notes |
 |---|---|---|
 | `data/raw/*.csv` | Yes | About 31 MB, mostly the traffic log |
